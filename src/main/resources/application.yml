@@ -1,0 +1,42 @@
+# ===== Server Configuration =====
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+# ===== Spring Configuration =====
+spring:
+
+  # ===== Database Configuration =====
+  datasource:
+    url: jdbc:mysql://localhost:3306/voting_db?createDatabaseIfNotExist=true
+    username: root
+    password: yesithsri
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # ===== JPA/Hibernate Configuration =====
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  # ===== Application Name =====
+  application:
+    name: Voting System with JWT
+
+# ===== JWT Configuration =====
+app:
+  jwtSecret: "ThisIsAVeryLongSecretKeyForJWTTokenGenerationAndValidationWithMinimum256BitsForHS512Algorithm123456789!@#$%^&*()"
+  jwtExpiration: 86400000
+
+# ===== Logging Configuration =====
+logging:
+  level:
+    root: INFO
+    com.edu.yesh: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
