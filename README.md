@@ -140,10 +140,11 @@ Default password for all users: `pass123`
 ```
 
 
-##  🔐 Security Features
-🔒 BCrypt password hashing
-🔑 HMAC-SHA512 JWT signing
-⏳ 24-hour token expiration
-👥 Role-based access control
-✔️ Input validation
-⚠️ Error handling
+## 🔐 Security Features
+
+- 🔒 BCrypt password hashing
+- 🔑 HMAC-SHA512 JWT signing
+- ⏳ 24-hour token expiration
+- 👥 Role-based access control
+- ✔️ Input validation
+- ⚠️ Error handling
